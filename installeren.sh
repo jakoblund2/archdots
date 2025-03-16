@@ -1,9 +1,6 @@
 #!/bin/bash
 # Arch Linux Install Script
 
-# First install ML4W Hyprland Rolling Release:
-bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/setup-arch.sh)
-
 # And then 3 interactive checklists:
 #   1. Non-driver packages (AUR/official) via paru
 #   2. Free driver packages via paru (preselected)
