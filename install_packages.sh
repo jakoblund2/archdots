@@ -171,4 +171,24 @@ fi
 CURSOR_CONF="/usr/share/icons/default/index.theme"
 echo -e "[Icon Theme]\nInherits=Bibata-Modern-Ice" > "$CURSOR_CONF"
 
+###############################################################################
+# Update Configuration Files: pacman.conf and paru.conf
+###############################################################################
+
+# Update /etc/pacman.conf: Set ParallelDownloads to 20
+PACMAN_CONF="/etc/pacman.conf"
+if grep -q "ParallelDownloads" "$PACMAN_CONF"; then
+  # Replace both commented and uncommented lines with the desired value.
+  sed -i 's/^[#]*\s*ParallelDownloads.*/ParallelDownloads = 20/' "$PACMAN_CONF"
+else
+  # If the setting doesn't exist, insert it under the [options] section.
+  sed -i '/^\[options\]/a ParallelDownloads = 20' "$PACMAN_CONF"
+fi
+
+# Update /etc/paru.conf: Uncomment BottomUp
+PARU_CONF="/etc/paru.conf"
+if [ -f "$PARU_CONF" ]; then
+  sed -i 's/^#\s*BottomUp/BottomUp/' "$PARU_CONF"
+fi
+
 echo "Installation complete!"
