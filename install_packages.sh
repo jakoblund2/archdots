@@ -75,6 +75,8 @@ DRIVER_PKGS=(
   "xorg-xinit"                  "X.Org X server utilities"                      on
 )
 
+# intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-nouveau xf86-video-vmware xorg-server xorg-xinit
+
 # Display interactive checklist for Non-driver packages
 NON_DRIVER_CHOICES=$(dialog --clear \
   --title "Select Non-driver Packages" \
