@@ -25,6 +25,16 @@ if ! command -v paru &>/dev/null; then
   (cd paru && makepkg -si --noconfirm)
 fi
 
+# Update /etc/pacman.conf: Set ParallelDownloads to 20
+PACMAN_CONF="/etc/pacman.conf"
+if grep -q "ParallelDownloads" "$PACMAN_CONF"; then
+  # Replace both commented and uncommented lines with the desired value.
+  sed -i 's/^[#]*\s*ParallelDownloads.*/ParallelDownloads = 20/' "$PACMAN_CONF"
+else
+  # If the setting doesn't exist, insert it under the [options] section.
+  sed -i '/^\[options\]/a ParallelDownloads = 20' "$PACMAN_CONF"
+fi
+
 ###############################################################################
 # Paru Packages Section - Two Lists: Non-Drivers and Drivers
 ###############################################################################
@@ -177,19 +187,24 @@ fi
 CURSOR_CONF="/usr/share/icons/default/index.theme"
 echo -e "[Icon Theme]\nInherits=Bibata-Modern-Ice" > "$CURSOR_CONF"
 
+# Download the specified image to the home directory
+wget -O ~/Windows_Wallpaper_Expeditions_IG_Loic_Lagarde_1x1.jpg https://github.com/jakoblund2/Semester3/blob/main/Backgrounds/Windows_Wallpaper%20Expeditions_IG_%20Loic%20Lagarde_1x1.jpg
+
+# Rename the existing background image and copy the downloaded image
+if [ -f /usr/share/sddm/themes/mountain/Backgrounds/Mountain.jpg ]; then
+  mv /usr/share/sddm/themes/mountain/Backgrounds/Mountain.jpg /usr/share/sddm/themes/mountain/Backgrounds/Mountain_old.jpg
+fi
+cp ~/Windows_Wallpaper_Expeditions_IG_Loic_Lagarde_1x1.jpg /usr/share/sddm/themes/mountain/Backgrounds/Mountain.jpg
+
+# Update the theme configuration
+THEME_CONF="/usr/share/sddm/themes/mountain/theme.conf"
+if [ -f "$THEME_CONF" ]; then
+  sed -i 's/^FormPosition="left"/FormPosition="center"/' "$THEME_CONF"
+fi
+
 ###############################################################################
 # Update Configuration Files: pacman.conf and paru.conf
 ###############################################################################
-
-# Update /etc/pacman.conf: Set ParallelDownloads to 20
-PACMAN_CONF="/etc/pacman.conf"
-if grep -q "ParallelDownloads" "$PACMAN_CONF"; then
-  # Replace both commented and uncommented lines with the desired value.
-  sed -i 's/^[#]*\s*ParallelDownloads.*/ParallelDownloads = 20/' "$PACMAN_CONF"
-else
-  # If the setting doesn't exist, insert it under the [options] section.
-  sed -i '/^\[options\]/a ParallelDownloads = 20' "$PACMAN_CONF"
-fi
 
 # Update /etc/paru.conf: Uncomment BottomUp
 PARU_CONF="/etc/paru.conf"
