@@ -21,8 +21,8 @@ pacman -S --noconfirm git dialog
 # Install paru (AUR helper) if not installed
 if ! command -v paru &>/dev/null; then
   echo "paru not found, installing paru..."
-  git clone https://aur.archlinux.org/paru.git /tmp/paru
-  (cd /tmp/paru && makepkg -si --noconfirm)
+  git clone https://aur.archlinux.org/paru.git
+  (cd paru && makepkg -si --noconfirm)
 fi
 
 ###############################################################################
