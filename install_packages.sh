@@ -49,6 +49,7 @@ NON_DRIVER_PKGS=(
   "partitionmanager"            "Disk partition manager"                        on
   "prusa-slicer"                "Slicer for 3D printing"                        on
   "r2modman-bin"                "Game mod manager (AUR)"                        on
+  "sddm"                        "Login manager"                                 on
   "sddm-theme-mountain-git"	    "SDDM mountain theme"				                    on
   "spotify"                     "Music streaming client"                        on
   "steam"                       "Gaming platform"                               on
