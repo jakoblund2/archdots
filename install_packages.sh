@@ -32,8 +32,8 @@ fi
 # List 1: Non-driver packages (alphabetically sorted)
 NON_DRIVER_PKGS=(
   "blender"                     "3D modeling and rendering"                     on
-  "breaktimer-bin"		"Manage periodic breaks"			on
-  "docker"			"Containers"					on
+  "breaktimer-bin"		          "Manage periodic breaks"			                  on
+  "docker"			                "Containers"					                          on
   "espeak-ng"                   "Text-to-speech engine"                         on
   "filelight"                   "Disk usage analyzer"                           on
   "flatpak"                     "Application sandboxing system"                 on
@@ -41,7 +41,7 @@ NON_DRIVER_PKGS=(
   "github-cli"                  "GitHub command line tool"                      on
   "htop"                        "Interactive process viewer"                    on
   "krita"                       "Digital painting app"                          on
-  "localsend-bin"		"cross-platform alternative to AirDrop"		on
+  "localsend-bin"		            "cross-platform alternative to AirDrop"		      on
   "mission-center"              "Task management"                               on
   "nano"                        "Simple text editor"                            on
   "okular"                      "Document viewer"                               on
@@ -49,17 +49,18 @@ NON_DRIVER_PKGS=(
   "partitionmanager"            "Disk partition manager"                        on
   "prusa-slicer"                "Slicer for 3D printing"                        on
   "r2modman-bin"                "Game mod manager (AUR)"                        on
-  "sddm-theme-mountain-git"	"SDDM mountain theme"				on
+  "sddm-theme-mountain-git"	    "SDDM mountain theme"				                    on
   "spotify"                     "Music streaming client"                        on
   "steam"                       "Gaming platform"                               on
   "solaar"                      "Logitech device manager"                       on
+  "timeshift"                   "Backup solution"                               on
   "ufw"                         "Uncomplicated Firewall"                        on
   "vesktop-bin"                 "Desktop environment helper (AUR)"              on
   "visual-studio-code-bin"      "VS Code (AUR)"                                 on
   "vlc"                         "Media player"                                  on
 )
 
-# paru -S blender breaktimer-bin docker espeak-ng filelight flatpak floorp-bin github-cli htop krita localsend-bin mission-center nano okular ollama partitionmanager prusa-slicer r2modman-bin sddm-theme-mountain-git spotify steam solaar ufw vesktop-bin visual-studio-code-bin vlc
+# paru -S blender breaktimer-bin docker espeak-ng filelight flatpak floorp-bin github-cli htop krita localsend-bin mission-center nano okular ollama partitionmanager prusa-slicer r2modman-bin sddm-theme-mountain-git spotify steam solaar ufw vesktop-bin visual-studio-code-bin vlc timeshift 
 
 # List 2: Driver packages (alphabetically sorted and preselected)
 DRIVER_PKGS=(
