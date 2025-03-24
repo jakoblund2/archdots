@@ -59,6 +59,8 @@ NON_DRIVER_PKGS=(
   "vlc"                         "Media player"                                  on
 )
 
+# paru -S blender breaktimer-bin docker espeak-ng filelight flatpak floorp-bin github-cli htop krita localsend-bin mission-center nano okular ollama partitionmanager prusa-slicer r2modman-bin sddm-theme-mountain-git spotify steam solaar ufw vesktop-bin visual-studio-code-bin vlc
+
 # List 2: Driver packages (alphabetically sorted and preselected)
 DRIVER_PKGS=(
   "intel-media-driver"          "Intel media driver"                            on
