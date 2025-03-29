@@ -35,6 +35,17 @@ else
   sed -i '/^\[options\]/a ParallelDownloads = 20' "$PACMAN_CONF"
 fi
 
+# Ensure Color is not commented out.
+# This sed command finds lines starting with one or more '#' followed by optional spaces then 'Color'
+# and replaces them with just "Color".
+sed -i 's/^[#]\+\s*\(Color\)/\1/' "$PACMAN_CONF"
+
+# Add ILoveCandy if it's not already present.
+# This example assumes that ILoveCandy should follow the DownloadUser line.
+if ! grep -q "^ILoveCandy" "$PACMAN_CONF"; then
+  sed -i '/^DownloadUser.*/a ILoveCandy' "$PACMAN_CONF"
+fi
+
 ###############################################################################
 # Paru Packages Section - Two Lists: Non-Drivers and Drivers
 ###############################################################################
