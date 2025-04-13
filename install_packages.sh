@@ -75,6 +75,7 @@ NON_DRIVER_PKGS=(
   "spotify"                     "Music streaming client"                        on
   "steam"                       "Gaming platform"                               on
   "solaar"                      "Logitech device manager"                       on
+  "speech-dispatcher"           "Speech synthesis interface"                    on
   "ufw"                         "Uncomplicated Firewall"                        on
   "vesktop-bin"                 "Desktop environment helper (AUR)"              on
   "visual-studio-code-bin"      "VS Code (AUR)"                                 on
