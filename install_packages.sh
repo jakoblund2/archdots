@@ -149,6 +149,8 @@ FLATPAK_APPS=(
   "net.lutris.Lutris"                     "Lutris (gaming platform)"          on
 )
 
+# Add pied for natural voices. Install from github
+
 # Display interactive checklist for Flatpak apps
 FLATPAK_CHOICES=$(dialog --clear \
   --title "Select Flatpak Apps from Flathub" \
