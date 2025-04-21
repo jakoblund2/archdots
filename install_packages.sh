@@ -60,6 +60,7 @@ NON_DRIVER_PKGS=(
   "flatpak"                     "Application sandboxing system"                 on
   "floorp-bin"                  "Unique browser (AUR)"                          on
   "github-cli"                  "GitHub command line tool"                      on
+  "gtk2"                        "Dependency for MATLAB"                         on
   "htop"                        "Interactive process viewer"                    on
   "krita"                       "Digital painting app"                          on
   "localsend-bin"		            "cross-platform alternative to AirDrop"		      on
