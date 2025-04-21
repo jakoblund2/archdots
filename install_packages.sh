@@ -104,6 +104,8 @@ NON_DRIVER_PKGS=(
 # chmod +x ~/.local/share/applications/matlab.desktop
 # update-desktop-database ~/.local/share/applications
 
+echo "windowrule = tile, title:^(MATLAB).*" >> "$HOME/.config/hypr/conf/windowrule.conf" # make MATLAB tile by default
+
 # List 2: Driver packages (alphabetically sorted and preselected)
 DRIVER_PKGS=(
   "intel-media-driver"          "Intel media driver"                            on
