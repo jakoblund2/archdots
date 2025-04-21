@@ -68,6 +68,7 @@ NON_DRIVER_PKGS=(
   "okular"                      "Document viewer"                               on
   "ollama"                      "AI chat tool (AUR)"                            on
   "partitionmanager"            "Disk partition manager"                        on
+  "patchelf"                    "Fix MATLAB"                                    on
   "prusa-slicer"                "Slicer for 3D printing"                        on
   "r2modman-bin"                "Game mod manager (AUR)"                        on
   "sddm"                        "Login manager"                                 on
@@ -82,7 +83,9 @@ NON_DRIVER_PKGS=(
   "vlc"                         "Media player"                                  on
 )
 
-# paru -S blender breaktimer-bin docker espeak-ng filelight flatpak floorp-bin github-cli htop krita localsend-bin mission-center nano okular ollama partitionmanager prusa-slicer r2modman-bin sddm-theme-mountain-git spotify steam solaar ufw vesktop-bin visual-studio-code-bin vlc timeshift 
+# to install matlab, first install it and then run (remember to change the version number to match the path)
+# sudo patchelf --clear-execstack   ~/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/libmwfoundation_crash_handling.so
+# sudo patchelf --clear-execstack   ~/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/mathworksservicehost/rcf/matlabconnector/serviceprocess/rcf/service/libmwmshrcfservice.so
 
 # List 2: Driver packages (alphabetically sorted and preselected)
 DRIVER_PKGS=(
