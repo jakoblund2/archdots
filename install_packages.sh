@@ -88,6 +88,22 @@ NON_DRIVER_PKGS=(
 # sudo patchelf --clear-execstack   ~/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/libmwfoundation_crash_handling.so
 # sudo patchelf --clear-execstack   ~/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/mathworksservicehost/rcf/matlabconnector/serviceprocess/rcf/service/libmwmshrcfservice.so
 
+# to make a desktop entry of MATLAB
+# nano ~/.local/share/applications/matlab.desktop
+
+# [Desktop Entry]
+# Version=1.0
+# Type=Application
+# Name=MATLAB R2024b
+# Comment=MATLAB Technical Computing Environment
+# Exec=/usr/local/MATLAB/R2024b/bin/glnxa64/MATLAB -desktop
+# Icon=/usr/local/MATLAB/R2024b/bin/glnxa64/cef_resources/matlab_icon.png
+# Terminal=false
+# Categories=Development;Science;Math;
+
+# chmod +x ~/.local/share/applications/matlab.desktop
+# update-desktop-database ~/.local/share/applications
+
 # List 2: Driver packages (alphabetically sorted and preselected)
 DRIVER_PKGS=(
   "intel-media-driver"          "Intel media driver"                            on
