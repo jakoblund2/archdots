@@ -60,7 +60,6 @@ NON_DRIVER_PKGS=(
   "flatpak"                     "Application sandboxing system"                 on
   "floorp-bin"                  "Unique browser (AUR)"                          on
   "github-cli"                  "GitHub command line tool"                      on
-  "gtk2"                        "Dependency for MATLAB"                         on
   "htop"                        "Interactive process viewer"                    on
   "krita"                       "Digital painting app"                          on
   "localsend-bin"		            "cross-platform alternative to AirDrop"		      on
@@ -69,7 +68,6 @@ NON_DRIVER_PKGS=(
   "okular"                      "Document viewer"                               on
   "ollama"                      "AI chat tool (AUR)"                            on
   "partitionmanager"            "Disk partition manager"                        on
-  "patchelf"                    "Fix MATLAB"                                    on
   "prusa-slicer"                "Slicer for 3D printing"                        on
   "r2modman-bin"                "Game mod manager (AUR)"                        on
   "sddm"                        "Login manager"                                 on
@@ -79,7 +77,7 @@ NON_DRIVER_PKGS=(
   "solaar"                      "Logitech device manager"                       on
   "speech-dispatcher"           "Speech synthesis interface"                    on
   "ufw"                         "Uncomplicated Firewall"                        on
-  "vesktop-bin"                 "Desktop environment helper (AUR)"              on
+  "vesktop-bin"                 "Discord"                                       on
   "visual-studio-code-bin"      "VS Code (AUR)"                                 on
   "vlc"                         "Media player"                                  on
 )
