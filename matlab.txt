@@ -1,6 +1,9 @@
-# to install matlab, first install it and then run (remember to change the version number to match the path)
-sudo patchelf --clear-execstack   ~/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/libmwfoundation_crash_handling.so
-sudo patchelf --clear-execstack   ~/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/mathworksservicehost/rcf/matlabconnector/serviceprocess/rcf/service/libmwmshrcfservice.so
+# matlab dependency
+paru -S gtk2 patchelf
+
+# to install matlab, install it now and then run (remember to change the version number to match the path)
+sudo patchelf --clear-execstack ~/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/libmwfoundation_crash_handling.so
+sudo patchelf --clear-execstack ~/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/mathworksservicehost/rcf/matlabconnector/serviceprocess/rcf/service/libmwmshrcfservice.so
 
 # to make a desktop entry of MATLAB
 nano ~/.local/share/applications/matlab.desktop
