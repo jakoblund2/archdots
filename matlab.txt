@@ -1,3 +1,11 @@
+# download mpm
+https://www.mathworks.com/mpm/glnxa64/mpm
+chmod +x mpm
+sudo ./mpm install --inputfile ~/Downloads/mpm_input_r2024b.txt
+xhost +SI:localuser:root
+sudo /usr/local/MATLAB/R2024b/bin/glnxa64/MathWorksProductAuthorizer
+xhost -SI:localuser:root
+
 # matlab dependency
 paru -S gtk2 patchelf
 
