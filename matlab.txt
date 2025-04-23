@@ -1,9 +1,8 @@
-# download mpm
-https://www.mathworks.com/mpm/glnxa64/mpm
-chmod +x mpm
-sudo ./mpm install --inputfile ~/Downloads/mpm_input_r2024b.txt
+# download matlab zip
+unzip matlab_R2024b_Linux.zip -d ./matlab_R2024b_Linux
+cd ./matlab_R2024b_Linux
 xhost +SI:localuser:root
-sudo /usr/local/MATLAB/R2024b/bin/glnxa64/MathWorksProductAuthorizer
+sudo -H ./install
 xhost -SI:localuser:root
 
 # matlab dependency
