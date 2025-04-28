@@ -1,0 +1,5 @@
+.config/hypr/conf/autostart.conf
+
+# Solaar
+exec-once = solaar --window=hide
+
