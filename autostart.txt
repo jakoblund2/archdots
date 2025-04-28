@@ -3,3 +3,6 @@
 # Solaar
 exec-once = solaar --window=hide
 
+# Floorp
+# remember to ONCE create new profile with floorp -CreateProfile preload
+exec-once = floorp --headless --no-remote -P preload about:blank >/dev/null 2>&1
