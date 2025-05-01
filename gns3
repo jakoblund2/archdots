@@ -1,4 +1,4 @@
-paru -S gns3-server-git
+paru -S gns3-server-git gns3-gui-git
 Download appliances and put them here:
 /home/jakob/.local/share/GNS3/appliances
 
@@ -12,4 +12,7 @@ sudo usermod -aG docker $USER
 
 paru -S dynamips-git ubridge # For switches to work (they need cisco code)
 
-Login browser via 127.0.0.1:3080
+Start server with
+gns3server --local
+
+And now open the GUI application
