@@ -1,0 +1,16 @@
+# install
+sudo pacman -Syu fprintd libfprint
+
+# enroll fingerprint
+fprintd-enroll
+
+# check fingerprint
+fprintd-verify jakob
+
+# use in sddm
+sudo nano /etc/pam.d/sddm
+
+# add the following on line 2 (first line w.o. header)
+auth       sufficient   pam_fprintd.so
+
+# it will now prioritize fingerprint and fallback to password
