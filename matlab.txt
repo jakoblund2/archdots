@@ -5,6 +5,11 @@ xhost +SI:localuser:root
 sudo -H ./install
 xhost -SI:localuser:root
 
+# just run the program once
+matlab
+
+# and stop it again after 10 sec
+
 # matlab dependency
 paru -S gtk2 patchelf
 
