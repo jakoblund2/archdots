@@ -14,3 +14,10 @@ sudo nano /etc/pam.d/sddm
 auth       sufficient   pam_fprintd.so
 
 # it will now prioritize fingerprint and fallback to password
+
+
+# sudo fingerprint
+sudo nano /etc/pam.d/sudo
+
+# insert the following above all else except header
+auth       sufficient   pam_fprintd.so
