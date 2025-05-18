@@ -1,0 +1,10 @@
+insert the following into .bashrc:
+if [[ $- == *i* ]]
+then
+    bind '"\e[A": history-search-backward'
+    bind '"\e[B": history-search-forward'
+fi
+
+and remember to
+source .bashrc
+to make it work in the current terminal
