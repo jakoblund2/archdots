@@ -55,6 +55,7 @@ NON_DRIVER_PKGS=(
   "blender"                     "3D modeling and rendering"                     on
   "breaktimer-bin"		          "Manage periodic breaks"			                  on
   "docker"			                "Containers"					                          on
+  "earlyoom"                    "Kill runaway processes automatically"          on
   "espeak-ng"                   "Text-to-speech engine"                         on
   "filelight"                   "Disk usage analyzer"                           on
   "flatpak"                     "Application sandboxing system"                 on
