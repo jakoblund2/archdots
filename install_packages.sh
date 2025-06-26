@@ -57,6 +57,7 @@ NON_DRIVER_PKGS=(
   "docker"			                "Containers"					                          on
   "earlyoom"                    "Kill runaway processes automatically"          on
   "espeak-ng"                   "Text-to-speech engine"                         on
+  "exfatprogs"                  "Support for exFAT"                             on
   "filelight"                   "Disk usage analyzer"                           on
   "flatpak"                     "Application sandboxing system"                 on
   "floorp-bin"                  "Unique browser (AUR)"                          on
