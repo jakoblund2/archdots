@@ -1,0 +1,4 @@
+In keybinding in hyprland conf, add
+
+bind = SHIFT, XF86MonBrightnessUp, exec, brightnessctl -d chromeos::kbd_backlight s +10
+bind = SHIFT, XF86MonBrightnessDown, exec, brightnessctl -d chromeos::kbd_backlight s 10-
