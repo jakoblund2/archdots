@@ -52,15 +52,14 @@ fi
 
 # List 1: Non-driver packages (alphabetically sorted)
 NON_DRIVER_PKGS=(
-  "blender"                     "3D modeling and rendering"                     on
   "breaktimer-bin"		          "Manage periodic breaks"			                  on
-  "docker"			                "Containers"					                          on
+  "docker-desktop"              "Containers"					                          on
   "earlyoom"                    "Kill runaway processes automatically"          on
   "espeak-ng"                   "Text-to-speech engine"                         on
   "exfatprogs"                  "Support for exFAT"                             on
   "filelight"                   "Disk usage analyzer"                           on
   "flatpak"                     "Application sandboxing system"                 on
-  "floorp-bin"                  "Unique browser (AUR)"                          on
+  "floorp"                      "Unique browser (AUR)"                          on
   "github-cli"                  "GitHub command line tool"                      on
   "htop"                        "Interactive process viewer"                    on
   "krita"                       "Digital painting app"                          on
@@ -68,12 +67,11 @@ NON_DRIVER_PKGS=(
   "mission-center"              "Task management"                               on
   "nano"                        "Simple text editor"                            on
   "okular"                      "Document viewer"                               on
-  "ollama"                      "AI chat tool (AUR)"                            on
   "partitionmanager"            "Disk partition manager"                        on
+  "pinta"                       "Imgage Editor"                                 on
   "prusa-slicer"                "Slicer for 3D printing"                        on
   "r2modman-bin"                "Game mod manager (AUR)"                        on
   "sddm"                        "Login manager"                                 on
-  "sddm-theme-mountain-git"	    "SDDM mountain theme"				                    on
   "spotify"                     "Music streaming client"                        on
   "steam"                       "Gaming platform"                               on
   "solaar"                      "Logitech device manager"                       on
@@ -189,62 +187,6 @@ else
   for app in $FLATPAK_LIST; do
     flatpak install -y flathub "$app"
   done
-fi
-
-###############################################################################
-# Apply SDDM Theme and Cursor Theme Configurations
-###############################################################################
-
-# 1. SDDM configuration: Update /etc/sddm.conf.d/sddm.conf so that under the [Theme] section
-#    the line 'Current=' is set to 'mountain' without overwriting the rest of the file.
-SDDM_CONF="/etc/sddm.conf.d/sddm.conf"
-if [ -f "$SDDM_CONF" ]; then
-  # If the [Theme] section exists...
-  if grep -q '^\[Theme\]' "$SDDM_CONF"; then
-    # If a 'Current=' line exists within the [Theme] section, replace it.
-    if sed -n '/^\[Theme\]/,/^\[/{/^[[:space:]]*Current=/p}' "$SDDM_CONF" | grep -q 'Current='; then
-      sed -i '/^\[Theme\]/,/^\[/{s/^[[:space:]]*Current=.*/Current=mountain/}' "$SDDM_CONF"
-    else
-      # No Current line exists; insert it after the [Theme] header.
-      sed -i '/^\[Theme\]/a Current=mountain' "$SDDM_CONF"
-    fi
-  else
-    # If no [Theme] section exists, append it to the file.
-    echo -e "\n[Theme]\nCurrent=mountain" >> "$SDDM_CONF"
-  fi
-else
-  # If the file doesn't exist, create it.
-  mkdir -p "$(dirname "$SDDM_CONF")"
-  echo -e "[Theme]\nCurrent=mountain" > "$SDDM_CONF"
-fi
-
-# 2. Cursor theme configuration: Overwrite /usr/share/icons/default/index.theme
-CURSOR_CONF="/usr/share/icons/default/index.theme"
-echo -e "[Icon Theme]\nInherits=Bibata-Modern-Ice" > "$CURSOR_CONF"
-
-# Download the specified image to the home directory
-wget -O ~/Windows_Wallpaper_Expeditions_IG_Loic_Lagarde_1x1.jpg https://github.com/jakoblund2/Semester3/blob/main/Backgrounds/Windows_Wallpaper%20Expeditions_IG_%20Loic%20Lagarde_1x1.jpg
-
-# Rename the existing background image and copy the downloaded image
-if [ -f /usr/share/sddm/themes/mountain/Backgrounds/Mountain.jpg ]; then
-  mv /usr/share/sddm/themes/mountain/Backgrounds/Mountain.jpg /usr/share/sddm/themes/mountain/Backgrounds/Mountain_old.jpg
-fi
-cp ~/Windows_Wallpaper_Expeditions_IG_Loic_Lagarde_1x1.jpg /usr/share/sddm/themes/mountain/Backgrounds/Mountain.jpg
-
-# Update the theme configuration
-THEME_CONF="/usr/share/sddm/themes/mountain/theme.conf"
-if [ -f "$THEME_CONF" ]; then
-  sed -i 's/^FormPosition="left"/FormPosition="center"/' "$THEME_CONF"
-fi
-
-###############################################################################
-# Update Configuration Files: pacman.conf and paru.conf
-###############################################################################
-
-# Update /etc/paru.conf: Uncomment BottomUp
-PARU_CONF="/etc/paru.conf"
-if [ -f "$PARU_CONF" ]; then
-  sed -i 's/^#\s*BottomUp/BottomUp/' "$PARU_CONF"
 fi
 
 echo "Installation complete!"
