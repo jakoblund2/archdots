@@ -1,0 +1,13 @@
+in the file ~/.config/waybar/themes/ml4w-modern/style.css
+
+to disable flashing battery icon set animation-iteration-count to a number like 10
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: @textcolor3;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 10;
+    animation-direction: alternate;
+}
