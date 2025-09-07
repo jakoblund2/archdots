@@ -16,6 +16,11 @@ Include "clients/*.conf"
 nano modules/kokoro.conf
 # ~/.config/speech-dispatcher/modules/kokoro.conf
 
+GenericExecuteSynth "bash -lc 'set -o pipefail; text=$(printf \"%s\" \"\$DATA\"); printf \"%s\" \"\$text\" | grep -qP \"\\p{L}|\\p{N}\" || exit 0; printf \"%s\" \"\$text\" | MODEL=kokoro VOICE=af_heart RESP=wav jq -Rs \"{model:env.MODEL, voice:env.VOICE, input:., response_format:env.RESP}\" | curl -fsS -H \"Content-Type: application/json\" --data-binary @- http://127.0.0.1:8880/v1/audio/speech | pw-play -'"
+
+AddVoice "en_US" "FEMALE1" "Kokoro"
+
+OLD CONF (Just for backup):
 GenericExecuteSynth "bash -c \"LC_ALL=C.UTF-8; \
 raw=\\\$(mktemp /tmp/kokoro.raw.XXXXXX); prog=\\\$(mktemp /tmp/kokoro.jq.XXXXXX); \
 trap 'rm -f \\\"\\$raw\\\" \\\"\\$prog\\\"' EXIT; \
