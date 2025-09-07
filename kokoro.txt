@@ -28,3 +28,4 @@ jq -n --arg model kokoro --arg voice af_heart --arg resp wav --rawfile input \\\
 AddVoice "en_US" "FEMALE1" "Kokoro"
 
 Use systemctl --user restart speech-dispatcher to restart speech dispatcher without restarting (restart is needed when testing in browser)
+See errors with tail -F /run/user/1000/speech-dispatcher/log/kokoro.log
