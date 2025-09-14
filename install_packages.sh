@@ -62,6 +62,7 @@ NON_DRIVER_PKGS=(
   "floorp"                      "Unique browser (AUR)"                          on
   "github-cli"                  "GitHub command line tool"                      on
   "htop"                        "Interactive process viewer"                    on
+  "kanshi"                      "Better way to handle monitor setup"            on
   "krita"                       "Digital painting app"                          on
   "localsend-bin"		            "cross-platform alternative to AirDrop"		      on
   "mission-center"              "Task management"                               on
