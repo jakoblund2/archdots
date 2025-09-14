@@ -2,3 +2,6 @@
 
 # Solaar
 exec-once = solaar --window=hide
+
+# Kanshi
+exec-once = kanshi
