@@ -1,3 +1,6 @@
+# Kanshi config file
+# Place in ~/.config/kanshi/ and name it "config" (no extenstion)
+
 # Laptop only
 profile undocked {
   output eDP-1 enable position 0,0
@@ -9,6 +12,8 @@ profile docked-dual {
   output DP-12 enable position 2560,0
   output eDP-1 disable
 }
+
+# Using wildcards is not recommended and may crash, but here it is for future use
 
 # Fallback: any unknown external (projector/TV/etc.) mirrored with laptop
 #profile projector {
