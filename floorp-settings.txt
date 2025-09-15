@@ -1,0 +1,2 @@
+Go to about:config
+Set apz.gtk.pangesture.page_delta_mode_multiplier from 1.0 to 0.1
