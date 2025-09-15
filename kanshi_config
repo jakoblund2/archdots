@@ -3,7 +3,7 @@
 
 # Laptop only
 profile undocked {
-  output eDP-1 enable position 0,0
+  output eDP-1 enable position 0,0 scale 1.333333
 }
 
 # Dual externals side-by-side, laptop off
@@ -11,6 +11,12 @@ profile docked-dual {
   output DP-11 enable position 0,0
   output DP-12 enable position 2560,0
   output eDP-1 disable
+}
+
+# Connected to Lenovo Hub
+profile hub {
+  output eDP-1 enable scale 1
+  output "LNO*" enable mode 1920x1080@60 scale 1
 }
 
 # Using wildcards is not recommended and may crash, but here it is for future use
