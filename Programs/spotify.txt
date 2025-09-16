@@ -1,0 +1,13 @@
+# .local/share/applications/spotify.desktop
+# add the ozone-platform=wayland to launch Spotify with Wayland. Only needed for old applications like the Spotify app
+[Desktop Entry]
+Type=Application
+Name=Spotify
+GenericName=Music Player
+Icon=spotify-client
+TryExec=spotify
+Exec=spotify --ozone-platform=wayland --uri=%u
+Terminal=false
+MimeType=x-scheme-handler/spotify;
+Categories=Audio;Music;Player;AudioVideo;
+StartupWMClass=spotify
