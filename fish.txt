@@ -1,0 +1,5 @@
+Make fish default shell
+chsh -s $(which fish)
+
+Remove welcome message
+echo "functions -e fish_greeting" >> ~/.config/fish/config.fish
