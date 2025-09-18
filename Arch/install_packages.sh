@@ -59,10 +59,9 @@ NON_DRIVER_PKGS=(
   "exfatprogs"                  "Support for exFAT"                             on
   "filelight"                   "Disk usage analyzer"                           on
   "flatpak"                     "Application sandboxing system"                 on
-  "floorp"                      "Unique browser (AUR)"                          on
+  "floorp"                      "Browser from git. Long compile time"           on
   "github-cli"                  "GitHub command line tool"                      on
   "htop"                        "Interactive process viewer"                    on
-  "kanshi"                      "Better way to handle monitor setup"            on
   "krita"                       "Digital painting app"                          on
   "localsend-bin"		            "cross-platform alternative to AirDrop"		      on
   "mission-center"              "Task management"                               on
@@ -73,6 +72,7 @@ NON_DRIVER_PKGS=(
   "prusa-slicer"                "Slicer for 3D printing"                        on
   "r2modman-bin"                "Game mod manager (AUR)"                        on
   "sddm"                        "Login manager"                                 on
+  "shikane"                     "Better way to handle monitor setup"            on
   "spotify"                     "Music streaming client"                        on
   "steam"                       "Gaming platform"                               on
   "solaar"                      "Logitech device manager"                       on
