@@ -4,4 +4,4 @@
 exec-once = solaar --window=hide
 
 # Kanshi
-exec-once = kanshi
+exec-once = shikane
