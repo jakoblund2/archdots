@@ -1,5 +1,5 @@
 # ~/.config/shikane/config.toml
-
+# ALSO REMEMBER TO COMMENT OUT THE MONITOR CONFIG IN HYPRLAND CONF
 # --- Your specific profiles ---
 
 [[profile]]
