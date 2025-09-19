@@ -6,7 +6,7 @@ git clone https://github.com/remsky/Kokoro-FastAPI.git
 cd Kokoro-FastAPI
 uv sync
 uv run python docker/scripts/download_model.py --output api/src/models/v1_0
-./start-cpu
+./start-cpu.sh
 
 nano speechd.conf (in speech-dispatcher)
 AddModule "kokoro" "sd_generic" "kokoro.conf"
