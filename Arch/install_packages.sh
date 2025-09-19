@@ -52,6 +52,7 @@ fi
 
 # List 1: Non-driver packages (alphabetically sorted)
 NON_DRIVER_PKGS=(
+  "gnome-boxes"                 "Manage virtual machines"                       on
   "breaktimer-bin"		          "Manage periodic breaks"			                  on
   "docker-desktop"              "Containers"					                          on
   "earlyoom"                    "Kill runaway processes automatically"          on
