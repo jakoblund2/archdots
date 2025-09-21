@@ -1,0 +1,10 @@
+paru -S grub-customizer
+sudo pacman -S xorg-xhost
+xhost +SI:localuser:root
+grub-customizer
+xhost -SI:localuser:root
+
+sudo pacman -Syu os-prober
+sudo nano /etc/default/grub
+enable os-prober with
+GRUB_DISABLE_OS_PROBER="false"
