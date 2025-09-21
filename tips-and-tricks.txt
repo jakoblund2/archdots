@@ -1,0 +1,1 @@
+If you cant connect to a certain network first connected to through KDE, delete it in nmtui and connect to it again.
