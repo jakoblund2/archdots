@@ -85,6 +85,8 @@ NON_DRIVER_PKGS=(
   "vlc"                         "Media player"                                  on
 )
 
+# paru -S gnome-boxes breaktimer-bin docker-desktop earlyoom espeak-ng exfatprogs filelight flatpak github-cli htop krita localsend-bin mission-center pinta prusa-slicer shikane spotify steam texlive-full ufw vesktop-bin visual-studio-code-bin vlc
+
 # to install matlab, first install it and then run (remember to change the version number to match the path)
 # sudo patchelf --clear-execstack   ~/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/libmwfoundation_crash_handling.so
 # sudo patchelf --clear-execstack   ~/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/mathworksservicehost/rcf/matlabconnector/serviceprocess/rcf/service/libmwmshrcfservice.so
