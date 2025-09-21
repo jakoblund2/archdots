@@ -1,4 +1,4 @@
-# .local/share/applications/spotify.desktop
+# /usr/share/applications/spotify.desktop
 # add the ozone-platform=wayland to launch Spotify with Wayland. Only needed for old applications like the Spotify app
 [Desktop Entry]
 Type=Application
