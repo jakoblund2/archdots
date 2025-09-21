@@ -1,1 +1,2 @@
+sudo nano /usr/lib/udev/rules.d/42-logitech-unify-permissions.rules
 https://github.com/pwr-Solaar/Solaar/commit/924684b610f831ceeb659bbc9a8321e38954870e
