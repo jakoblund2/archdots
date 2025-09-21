@@ -1,2 +1,24 @@
 sudo nano /usr/lib/udev/rules.d/42-logitech-unify-permissions.rules
 https://github.com/pwr-Solaar/Solaar/commit/924684b610f831ceeb659bbc9a8321e38954870e
+
+setup like this:
+
+Rule:
+  Test thumb_wheel_up 30
+  Key press Super_L + Shift_L + Tab
+
+Rule:
+  Test thumb_wheel_down 30
+  Key press Super_L + Tab
+
+if nothing happens with key diversion, run this:
+# 1) Download Solaar's uinput rule
+sudo curl -o /etc/udev/rules.d/42-logitech-unify-permissions.rules https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/rules.d-uinput/42-logitech-unify-permissions.rules
+
+# 2) Reload udev + trigger
+sudo udevadm control --reload
+sudo udevadm trigger
+
+# 3) Make sure the uinput kernel module is loaded (and persists)
+sudo modprobe uinput
+echo uinput | sudo tee /etc/modules-load.d/uinput.conf
