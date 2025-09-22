@@ -1,3 +1,4 @@
+# Place in /etc/default/grub (no extension)
 # GRUB boot loader configuration
 
 GRUB_DEFAULT=saved
