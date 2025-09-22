@@ -12,13 +12,15 @@ Rule:
   Key press Super_L + Tab
 
 if nothing happens with key diversion, run this:
-# 1) Download Solaar's uinput rule
-sudo curl -o /etc/udev/rules.d/42-logitech-unify-permissions.rules https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/rules.d-uinput/42-logitech-unify-permissions.rules
+# 1) Install the Wayland/uinput-friendly Solaar rule (overrides the package default)
+sudo curl -o /etc/udev/rules.d/42-logitech-unify-permissions.rules \
+  https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/rules.d-uinput/42-logitech-unify-permissions.rules
 
-# 2) Reload udev + trigger
-sudo udevadm control --reload
+# 2) Reload udev and apply rules
+sudo udevadm control --reload-rules
 sudo udevadm trigger
 
-# 3) Make sure the uinput kernel module is loaded (and persists)
-sudo modprobe uinput
-echo uinput | sudo tee /etc/modules-load.d/uinput.conf
+# 3) Ensure the uinput kernel module is loaded
+lsmod | grep -q uinput || sudo modprobe uinput
+
+# 4) Unplug/replug the receiver (or reboot)
