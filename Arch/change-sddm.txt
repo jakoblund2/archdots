@@ -1,0 +1,13 @@
+change background
+
+sudo nano /usr/share/sddm/themes/breeze/theme.conf
+
+change cursor
+paru bibata
+
+sudo mkdir -p /etc/sddm.conf.d
+sudo nano /etc/sddm.conf.d/10-cursor.conf
+
+[Theme]
+CursorTheme=Bibata-Modern-Ice
+CursorSize=24
