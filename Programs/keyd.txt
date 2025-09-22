@@ -1,0 +1,17 @@
+To setup a custom shortcut like using the framework button, you can do
+
+sudo pacman -S keyd
+sudo systemctl enable --now keyd
+sudo keyd monitor # to check name of framework button - as of now it is "media"
+
+Edit file with
+sudo nano /etc/keyd/default.conf
+
+Trigger Ctrl + Shift + M (C = Ctrl, S = Shift, m=m
+[ids]
+*
+
+[main]
+media = C-S-m
+
+sudo keyd reload to test the new config
