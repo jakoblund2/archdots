@@ -2,8 +2,8 @@
 # You may have to create the folder and file yourself
 # ALSO REMEMBER TO COMMENT OUT THE MONITOR CONFIG IN HYPRLAND CONF
 # If you get stuck in booting screen, disable splash
-sudo nano /etc/default/grub
-and remove splash from GRUB_CMDLINE_LINUX_DEFAULT='nowatchdog nvme_load=YES zswap.enabled=0 loglevel=3'
+#sudo nano /etc/default/grub
+#and remove splash from GRUB_CMDLINE_LINUX_DEFAULT='nowatchdog nvme_load=YES zswap.enabled=0 loglevel=3'
 # --- Your specific profiles ---
 
 [[profile]]
