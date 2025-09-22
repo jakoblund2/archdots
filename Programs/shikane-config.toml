@@ -4,6 +4,7 @@
 # If you get stuck in booting screen, disable splash
 #sudo nano /etc/default/grub
 #and remove splash from GRUB_CMDLINE_LINUX_DEFAULT='nowatchdog nvme_load=YES zswap.enabled=0 loglevel=3'
+#sudo grub-mkconfig -o /boot/grub/grub.cfg
 # --- Your specific profiles ---
 
 [[profile]]
