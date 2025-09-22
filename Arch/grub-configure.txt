@@ -1,9 +1,6 @@
-paru -S grub-customizer
-sudo pacman -S xorg-xhost
-xhost +SI:localuser:root
-grub-customizer
-xhost -SI:localuser:root
+# do not use grub-customizer as it breaks boot!
 
+# get windows in grub
 sudo pacman -Syu os-prober
 sudo nano /etc/default/grub
 enable os-prober with
