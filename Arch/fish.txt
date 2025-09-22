@@ -10,3 +10,6 @@ Put this in ~/.config/fish/config.fish (create the file if it doesn’t exist):
 function fish_greeting
     # do nothing
 end
+
+And if using ml4w hyprland dots, also comment it out in
+.config/fish/conf.d/30-autostart.fish
