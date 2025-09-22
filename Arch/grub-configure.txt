@@ -7,3 +7,5 @@ enable os-prober with
 GRUB_DISABLE_OS_PROBER="false"
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+see grub config file for example file
