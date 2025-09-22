@@ -1,3 +1,0 @@
-sudo nano /usr/share/cachyos-fish-config/cachyos-config.fish
-
-and comment out fastfetch in the first few lines
