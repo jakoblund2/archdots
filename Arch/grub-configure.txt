@@ -9,3 +9,5 @@ GRUB_DISABLE_OS_PROBER="false"
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 see grub config file for example file
+
+If on boot it gives an error like Sparse file... you probably have something wrong in the config file. Maybe " or ' that should(nt) be there
