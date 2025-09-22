@@ -3,3 +3,10 @@ chsh -s $(which fish)
 
 Remove welcome message
 echo "functions -e fish_greeting" >> ~/.config/fish/config.fish
+
+Remove fastfetch (cachyos)
+Put this in ~/.config/fish/config.fish (create the file if it doesn’t exist):
+# Disable CachyOS fastfetch greeting
+function fish_greeting
+    # do nothing
+end
