@@ -5,3 +5,5 @@ sudo pacman -Syu os-prober
 sudo nano /etc/default/grub
 enable os-prober with
 GRUB_DISABLE_OS_PROBER="false"
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
