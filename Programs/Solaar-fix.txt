@@ -24,3 +24,7 @@ sudo udevadm trigger
 lsmod | grep -q uinput || sudo modprobe uinput
 
 # 4) Unplug/replug the receiver (or reboot)
+
+# If it still does not work, try
+sudo modprobe uinput
+echo uinput | sudo tee /etc/modules-load.d/uinput.conf
