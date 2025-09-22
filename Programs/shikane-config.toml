@@ -9,7 +9,6 @@
 
 [[profile]]
 name = "undocked"
-exec = [ "sh -lc 'pkill -x wl-mirror || true'" ]
   [[profile.output]]
   search   = "n=eDP-1"
   enable   = true
@@ -18,7 +17,6 @@ exec = [ "sh -lc 'pkill -x wl-mirror || true'" ]
 
 [[profile]]
 name = "docked-dual"
-exec = [ "sh -lc 'pkill -x wl-mirror || true'" ]
   [[profile.output]]
   search   = "n=DP-11"
   enable   = true
@@ -34,44 +32,17 @@ exec = [ "sh -lc 'pkill -x wl-mirror || true'" ]
   enable = false
 
 [[profile]]
-name = "mirror-externals"
-# Clear any previous mirrors first
-exec = [ "sh -lc 'pkill -x wl-mirror || true'" ]
+name = "external-any"
 
-  # Laptop panel (mirror source)
   [[profile.output]]
   search = "n=eDP-1"
   enable = true
-  # (Optional: for true 1:1 clone, also set the laptop to 1080p@60 if it supports it)
-  #mode   = "1920x1080@60Hz"
-  #scale  = 1
+  scale  = 1.333333
+  position = "0,0"
 
-  # External #1 (forced 1080p@60)
   [[profile.output]]
-  search = [ "n%DP-", "n%HDMI-", "n%USB-C" ]
+  search = "/DP-[1-9]"
   enable = true
   mode   = "1920x1080@60Hz"
   scale  = 1
-  exec   = [
-    "sh -lc 'wl-present mirror eDP-1 --fullscreen-output \"$SHIKANE_OUTPUT_NAME\" --fullscreen &'"
-  ]
-
-  # External #2 (forced 1080p@60)
-  [[profile.output]]
-  search = [ "n%DP-", "n%HDMI-", "n%USB-C" ]
-  enable = true
-  mode   = "1920x1080@60Hz"
-  scale  = 1
-  exec   = [
-    "sh -lc 'wl-present mirror eDP-1 --fullscreen-output \"$SHIKANE_OUTPUT_NAME\" --fullscreen &'"
-  ]
-
-  # External #3 (forced 1080p@60)
-  [[profile.output]]
-  search = [ "n%DP-", "n%HDMI-", "n%USB-C" ]
-  enable = true
-  mode   = "1920x1080@60Hz"
-  scale  = 1
-  exec   = [
-    "sh -lc 'wl-present mirror eDP-1 --fullscreen-output \"$SHIKANE_OUTPUT_NAME\" --fullscreen &'"
-  ]
+  position = "1692,0"
