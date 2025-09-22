@@ -63,4 +63,4 @@ GRUB_DISABLE_SUBMENU=y
 # operating systems.
 GRUB_DISABLE_OS_PROBER=false
 GRUB_EARLY_INITRD_LINUX_STOCK=''
-GRUB_TOP_LEVEL='/boot/vmlinuz-linux-cachyos'
+#GRUB_TOP_LEVEL='/boot/vmlinuz-linux-cachyos'
