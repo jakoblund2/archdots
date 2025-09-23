@@ -1,0 +1,10 @@
+paru cisco-secure-client
+log in as usual with server as remote.au.dk and username auXXXXXX@uni.au.dk and password.
+
+Install samba
+sudo pacman -S gvfs gvfs-smb samba
+
+Restart Nautilus (or computer)
+
+Go to network tab and connect to smb://uni.au.dk/dfs/
+Log in as registered user with AUXXXXXX <- notice capital AU, set domain to UNI <- notice capital UNI and password
