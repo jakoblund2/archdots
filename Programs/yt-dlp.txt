@@ -1,0 +1,13 @@
+Used to download videos from websites.
+Find m3u8 files under Inspect (F12) ->  Network and filter for m3u8. You may have to reload the page or play some of the video for it to appear.
+Now grab the link and paste into yt-dlp like this
+yt-dlp --no-check-certificate "https://cfvod.kaltura.com/.../index.m3u8?Policy=...&Signature=...&Key-Pair-Id=..." -o slides.mp4
+Note that there may be several streams (like camera and slides are separate). If there are they can be combined with ffmpeg like this with pip
+ffmpeg -i slides.mp4 -i camera.mp4 \
+  -filter_complex "[1:v]scale=400:-1[camera];[0:v][camera]overlay=W-w-10:10" \
+  -map 0:a? -c:v libx264 -crf 23 -preset veryfast -c:a aac -shortest output_pip.mp4
+where high crf means lower quality and lower means higher quality. veryfast means high file size but fast render. placebo is smallest file with slowest render. The scale is ultrafast, superfast, veryfast, faster, fast, medium (default), slow, slower, placebo
+or side-by-side
+ffmpeg -i camera.mp4 -i slides.mp4 \
+  -filter_complex "[0:v][1:v]hstack=inputs=2" \
+  -map 0:a? -c:v libx264 -crf 18 -preset veryfast -c:a aac -shortest output_sbs.mp4
