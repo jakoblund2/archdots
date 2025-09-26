@@ -1,4 +1,0 @@
-keybindings for laptop
-
-# Take a full-screen shot when you press Print
-bind = , PRINT, exec, ~/.config/hypr/scripts/screenshot.sh
