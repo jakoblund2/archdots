@@ -1,0 +1,13 @@
+Use bluetoothctl or blueman. bluetoothctl is needed for keyboard pairing and blueman is an easy gui
+
+Add mouse in blueman by settings mouse in pairing mode by hold down profile button. Search for new devices in blueman and add the mouse as trusted and create pairing.
+
+The keyboard must have a pairing passkey which isnt shown in blueman, which is why bluetoothctl is needed. Put keyboard in pairing mode by holding down a profile buttion. In a terminal
+
+bluetoothctl
+power on
+agent KeyboardDisplay
+default-agent
+scan on
+
+Passkey should pop up in terminal. Enter it on keyboard and press enter
