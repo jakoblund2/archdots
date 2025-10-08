@@ -4,6 +4,8 @@ Remember to install solaar and enable Scroll Wheel Resolution for the bluetooth 
 
 Add mouse in blueman by settings mouse in pairing mode by hold down profile button. Search for new devices in blueman and add the mouse as trusted and create pairing.
 
+Before reading the below, try to just connect keyboard in the same gui as mouse, it works sometimes. Remember that using the gui is connected to the below terminal i.e. clicking buttons with mouse is the same as commands. Handy when you cant use the keyboard because it is in pairing mode.
+
 The keyboard must have a pairing passkey which isnt shown in blueman, which is why bluetoothctl is needed. Put keyboard in pairing mode by holding down a profile buttion. In a terminal
 
 bluetoothctl
