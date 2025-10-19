@@ -18,12 +18,12 @@ name = "undocked"
 [[profile]]
 name = "docked-dual"
   [[profile.output]]
-  search   = "n=DP-11"
+  search   = ["m=LEN P27q-10", "s=0x59443842"]
   enable   = true
   position = "0,0"
 
   [[profile.output]]
-  search   = "n=DP-12"
+  search   = ["m=LEN P27q-10", "s=0x01010101"]
   enable   = true
   position = "2560,0"
 
