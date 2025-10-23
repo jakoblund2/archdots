@@ -1,0 +1,27 @@
+how to export ipynb to pdf
+- create .venv and open containing folder in vscode
+
+uv init
+uv add jupyter
+uv run -p 3.13
+
+install needed packages
+
+sudo pacman -S --needed \
+    pandoc \
+    texlive-bin \
+    texlive-core \
+    texlive-latexextra \
+    texlive-fontsextra \
+    texlive-plaingeneric
+
+rebuild
+sudo mktexlsr
+
+check
+which pandoc
+which xelatex
+kpsewhich ulem.sty
+kpsewhich lmodern.sty
+
+now you should be able to export in vscode via the toolbar -> three dots -> export -> pdf
