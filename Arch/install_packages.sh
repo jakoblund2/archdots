@@ -78,7 +78,6 @@ NON_DRIVER_PKGS=(
   "steam"                       "Gaming platform"                               on
   "solaar"                      "Logitech device manager"                       on
   "speech-dispatcher"           "Speech synthesis interface"                    on
-  "texlive-full"                "Texlive - very large and takes a long time"    on
   "ufw"                         "Uncomplicated Firewall"                        on
   "vesktop-bin"                 "Discord"                                       on
   "visual-studio-code-bin"      "VS Code (AUR)"                                 on
