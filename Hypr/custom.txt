@@ -1,0 +1,6 @@
+Uncomment / enabled the following to avoid excessive GPU load
+
+# Example for xwayland
+xwayland {
+  force_zero_scaling = true
+}
