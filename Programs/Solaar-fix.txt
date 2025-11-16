@@ -28,3 +28,8 @@ lsmod | grep -q uinput || sudo modprobe uinput
 # If it still does not work, try
 sudo modprobe uinput
 echo uinput | sudo tee /etc/modules-load.d/uinput.conf
+
+
+ON KDE TO AUTOSTART IN THE BACKGROUND
+
+Add Solaar to autostart. Press the "See properties" icon. Go to "Application" and add --window=hide to "Arguments"
