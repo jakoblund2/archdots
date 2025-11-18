@@ -1,0 +1,12 @@
+To use gamescope insert this into Steam game launch options DRI_PRIME=1 gamescope --backend sdl --force-grab-cursor -f -w 1920 -h 1080 -W 2560 -H 1440 -F fsr -r 60 -- %command%
+
+DRI_PRIME=1 use main graphics card instead of iGPU
+gamescope name of program
+--backend sdl use sdl - default does not work
+--force-grab-cursor otherwise cursor escapes game
+-f fullscreen
+-w 1920 -h 1080 make game think this is a 1080p screen
+-W 2560 -H 1440 upscale to 1440p
+-F fsr use FSR
+-r 60 cap framerate at 60
+-- %command% must be used for it to work
