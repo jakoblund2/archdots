@@ -10,3 +10,5 @@ gamescope name of program
 -F fsr use FSR
 -r 60 cap framerate at 60
 -- %command% must be used for it to work
+
+To get games supporting FSR working, use Goverlay. Remember that this only works for games that explicitly support this!
