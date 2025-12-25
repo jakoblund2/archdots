@@ -1,0 +1,5 @@
+Framework fans cannot be controlled in firmware or with CoreCTRL.
+
+Instead use the aur/fw-fanctrl-ui-git
+
+It does not create systemd syslink by itself, so run sudo systemctl enable --now fw-fanctrl.service
