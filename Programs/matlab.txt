@@ -1,3 +1,5 @@
+https://obsp.de/en/posts/quick-installation-matlab-2025b-on-arch/
+
 # download matlab zip
 unzip matlab_R2024b_Linux.zip -d ./matlab_R2024b_Linux
 cd ./matlab_R2024b_Linux
